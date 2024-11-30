@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(this);
 
         try {
-            const response = await fetch('http://localhost:8080/upload', {
+            const response = await fetch('https://aduan1.sibumi.id/upload', {
                 method: 'POST',
                 body: formData
             });

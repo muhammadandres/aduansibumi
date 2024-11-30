@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         try {
-            const response = await fetch(`http://localhost:8080/data/${nama}`);
+            const response = await fetch(`https://aduan1.sibumi.id/data/${nama}`);
             
             if (response.ok) {
                 const data = await response.json();
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dataId = e.target.getAttribute('data-id');
         
         try {
-            const response = await fetch(`http://localhost:8080/delete/${dataId}`, {
+            const response = await fetch(`https://aduan1.sibumi.id/delete/${dataId}`, {
                 method: 'DELETE'
             });
 
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(this);
 
         try {
-            const response = await fetch(`http://localhost:8080/update/${formData.get('id')}`, {
+            const response = await fetch(`https://aduan1.sibumi.id/update/${formData.get('id')}`, {
                 method: 'PUT',
                 body: formData
             });
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let filesHtml = data.files.map(file => `
             <div class="file-item">
                 <p>Nama File: ${file.nama_file}</p>
-                <a href="http://localhost:8080/${file.file_url}" target="_blank">Lihat File</a>
+                <a href="https://aduan1.sibumi.id/${file.file_url}" target="_blank">Lihat File</a>
             </div>
         `).join('');
     
